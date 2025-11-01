@@ -3,9 +3,11 @@ package com.atelier.tennis.service;
 import com.atelier.tennis.dto.StatsResponseDTO;
 import com.atelier.tennis.entity.Player;
 import com.atelier.tennis.repository.PlayerRepository;
+import com.atelier.tennis.util.MathUtils;
 import org.springframework.stereotype.Service;
 
-import java.util.*;
+import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 @Service
@@ -24,7 +26,6 @@ public class StatsService {
             return new StatsResponseDTO("N/A", 0.0, 0.0);
         }
 
-        // 1️⃣ Pays avec le meilleur ratio de victoires moyen
         Map<String, Double> avgWinRatioByCountry = players.stream()
                 .filter(p -> p.getData() != null && p.getCountry() != null)
                 .collect(Collectors.groupingBy(
@@ -37,7 +38,6 @@ public class StatsService {
                 .map(Map.Entry::getKey)
                 .orElse("N/A");
 
-        // 2️⃣ IMC moyen
         double averageBMI = players.stream()
                 .filter(p -> p.getData() != null && p.getData().getHeight() > 0)
                 .mapToDouble(p -> {
@@ -48,27 +48,16 @@ public class StatsService {
                 .average()
                 .orElse(0.0);
 
-      List<Double> sortedHeights = players.stream()
-        .filter(p -> p.getData() != null)
-        .map(p -> p.getData().getHeight())
-        .sorted()
-        .toList();
+        double medianHeight = MathUtils.median(players.stream()
+                .filter(p -> p.getData() != null)
+                .map(p -> (double) p.getData().getHeight())
+                .sorted()
+                .toList());
 
-     double medianHeight;
-        int size = sortedHeights.size();
-        if (size == 0) {
-            medianHeight = 0.0;
-        } else if (size % 2 == 0) {
-            medianHeight = (sortedHeights.get(size / 2 - 1) + sortedHeights.get(size / 2)) / 2.0;
-        } else {
-            medianHeight = sortedHeights.get(size / 2);
-        }
-
-
-        return new StatsResponseDTO(bestCountry, round(averageBMI), medianHeight);
-    }
-
-    private double round(double value) {
-        return Math.round(value * 100.0) / 100.0;
+        return new StatsResponseDTO(
+                bestCountry,
+                MathUtils.round(averageBMI, 2),
+                medianHeight
+        );
     }
 }
