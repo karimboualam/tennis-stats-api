@@ -16,7 +16,7 @@ import java.util.List;
 
 @Slf4j
 @Component
-@Profile("dev") //  s'exécute uniquement en mode "dev"
+@Profile("dev") 
 public class DataLoader implements CommandLineRunner {
 
     private final PlayerRepository playerRepository;
@@ -46,7 +46,6 @@ public class DataLoader implements CommandLineRunner {
             for (JsonNode node : root) {
                 Player player = objectMapper.treeToValue(node, Player.class);
 
-                //  Calcul du win ratio (basé sur le tableau "last")
                 JsonNode lastNode = node.path("data").path("last");
                 if (lastNode.isArray()) {
                     long wins = 0;
