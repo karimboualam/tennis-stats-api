@@ -17,6 +17,10 @@ public class Player {
     private String picture;
 
     @Embedded
+      @AttributeOverrides({
+            @AttributeOverride(name = "code", column = @Column(name = "country_code")),
+            @AttributeOverride(name = "picture", column = @Column(name = "country_picture"))
+    })
     private Country country;
 
     @Embedded

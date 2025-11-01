@@ -21,4 +21,10 @@ public class PlayerController {
     public List<PlayerDTO> getAllPlayers() {
         return playerService.getAllPlayersSorted();
     }
+
+    @GetMapping("/{id}")
+    @Operation(summary = "Get player by ID")
+    public PlayerDTO getPlayerById(@PathVariable Long id) {
+        return playerService.getPlayerById(id);
+    }
 }
