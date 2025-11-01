@@ -38,7 +38,6 @@ public class PlayerService {
                 .orElseThrow(() -> new PlayerNotFoundException(id));
     }
 
-    // 🔹 Nouvelle méthode pour la création d’un joueur
     @Transactional
     public PlayerDTO createPlayer(PlayerCreateDTO dto) {
         Player player = new Player();
