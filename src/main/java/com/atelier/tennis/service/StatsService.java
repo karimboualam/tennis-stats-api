@@ -24,7 +24,6 @@ public class StatsService {
             return new StatsResponseDTO("N/A", 0.0, 0.0);
         }
 
-        // 1️⃣ Pays avec le meilleur ratio de victoires moyen
         Map<String, Double> avgWinRatioByCountry = players.stream()
                 .filter(p -> p.getData() != null && p.getCountry() != null)
                 .collect(Collectors.groupingBy(
@@ -37,7 +36,6 @@ public class StatsService {
                 .map(Map.Entry::getKey)
                 .orElse("N/A");
 
-        // 2️⃣ IMC moyen
         double averageBMI = players.stream()
                 .filter(p -> p.getData() != null && p.getData().getHeight() > 0)
                 .mapToDouble(p -> {
