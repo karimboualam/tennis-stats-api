@@ -24,7 +24,6 @@ public class StatsService {
             return new StatsResponseDTO("N/A", 0.0, 0.0);
         }
 
-        // 1️⃣ Pays avec le meilleur ratio de victoires moyen
         Map<String, Double> avgWinRatioByCountry = players.stream()
                 .filter(p -> p.getData() != null && p.getCountry() != null)
                 .collect(Collectors.groupingBy(
