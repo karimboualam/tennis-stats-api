@@ -86,7 +86,7 @@ tennis-stats-api
 ### 1️⃣ Cloner le projet
 
 git clone https://github.com/karimboualam/tennis-stats-api.git
-cd tennis-stats-api
+&& cd tennis-stats-api
 
 
 ### 2️⃣ Lancer l’application avec H2
