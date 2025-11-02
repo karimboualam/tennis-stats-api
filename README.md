@@ -106,7 +106,9 @@ JDBC URL : jdbc:h2:mem:tennisdb
 Username : sa
 
 Password : (vide)
-``` 
+
+---
+
 ### 📚 Endpoints principaux
 
 | Méthode | URL                 | Description                                 |
@@ -115,6 +117,8 @@ Password : (vide)
 | `GET`   | `/api/players/{id}` | Récupère un joueur spécifique               |
 | `POST`  | `/api/players`      | Crée un nouveau joueur                      |
 | `GET`   | `/api/stats`        | Renvoie les statistiques globales           |
+
+---
 
 ### 📘 Documentation interactive (Swagger) :
 👉 http://localhost:8081/swagger-ui.html
