@@ -15,10 +15,14 @@ FROM eclipse-temurin:21-jdk-jammy
 WORKDIR /app
 
 # Copier le JAR construit depuis l’étape précédente
-COPY --from=build /app/target/tennis-stats-api-1.0.0.jar app.jar
+COPY --from=build /app/target/tennis-stats-api-*.jar app.jar
 
-# Exposer le port de l’application (8081 selon ton config)
-EXPOSE 8081
+# Exposer le port utilisé par Spring Boot (Render utilisera automatiquement $PORT)
+EXPOSE 8080
+
+# Utiliser la variable d’environnement PORT si Render la fournit
+ENV PORT=8080
+ENV SPRING_PROFILES_ACTIVE=prod
 
 # Lancer l'application Spring Boot
 ENTRYPOINT ["java", "-jar", "app.jar"]
