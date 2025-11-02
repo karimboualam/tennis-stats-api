@@ -293,5 +293,4 @@ jobs:
 
 ---
 
-📜 **Projet réalisé dans le cadre du Test Technique – L’Atelier (2025)**  
 🧾 **Licence : [MIT](./LICENSE)**  

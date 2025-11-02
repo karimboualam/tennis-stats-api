@@ -99,11 +99,6 @@ target/failsafe-reports/
 *.coverage
 *.coverage.xml
 
-### Docker ###
-Dockerfile
-docker-compose.yml
-.dockerignore
-*.pid
 
 ### Environment / Secrets ###
 .env
