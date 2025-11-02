@@ -64,7 +64,8 @@ tennis-stats-api
   ┣ service/ → Tests unitaires métier
   ┗ integration/ → Tests d’intégration complets
 
----
+``` 
+
 ---
 
 ## 🧠 Bonnes pratiques et conception
