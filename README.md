@@ -194,6 +194,45 @@ Base de données : PostgreSQL (hébergée)
 
 ---
 
+### ☁️ Déploiement Render (Cloud)
+
+🔗 Démo en ligne : https://tennis-stats-api.onrender.com
+
+Étapes de déploiement :
+
+Connexion du repo GitHub à Render
+Configuration du service Web
+
+Build command :
+
+mvn clean package -DskipTests
+
+
+Start command :
+
+java -jar target/tennis-stats-api-1.0.0.jar
+
+
+Profil actif : prod
+Base de données : PostgreSQL (hébergée)
+
+🚀 Tester l’API en ligne
+
+Vous pouvez directement accéder à la documentation interactive ici :
+👉 Swagger UI Render
+
+Exemples d’appels disponibles :
+
+🔹 GET /api/players → Liste de tous les joueurs
+
+🔹 GET /api/players/{id} → Détails d’un joueur
+
+🔹 GET /api/stats → Statistiques globales
+
+🔹 POST /api/players → Création d’un joueur
+
+---
+
 ### 🔁 Intégration Continue (CI/CD)
 
 Un pipeline Maven est configuré pour :
@@ -272,7 +311,7 @@ jobs:
 | ------------- | ------------------------------------------------------------------------------ |
 | 📘 Swagger UI | [http://localhost:8081/swagger-ui.html](http://localhost:8081/swagger-ui.html) |
 | 🧠 JavaDoc    | [Tennis Stats API – JavaDoc](https://karimboualam.github.io/tennis-stats-api/) |
-| 🧪 SonarCloud | | [https://sonarcloud.io/summary/new_code?id=karimboualam_tennis-stats-api](https://sonarcloud.io/summary/new_code?id=karimboualam_tennis-stats-api)                                                                |
+| 🧪 SonarCloud | [https://sonarcloud.io/summary/new_code?id=karimboualam_tennis-stats-api](https://sonarcloud.io/summary/new_code?id=karimboualam_tennis-stats-api)                                                                |
 | 📈 JaCoCo     | `target/site/jacoco/index.html`                                                |
 
 ---
