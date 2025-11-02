@@ -43,7 +43,7 @@ L’application suit les **principes SOLID**, une **architecture claire en couch
 
 ## 🧱 Architecture du projet
 
-
+```text
 tennis-stats-api
 ┣ src
 ┃ ┣ main/java/com/atelier/tennis
@@ -57,13 +57,12 @@ tennis-stats-api
 ┃ ┃ ┣ service/ → Logique métier (PlayerService, StatsService)
 ┃ ┃ ┗ util/ → Fonctions utilitaires (MathUtils)
 ┃ ┗ resources/
-┃ ┣ application.yml
-┃ ┗ data/headtohead.json (données de test)
+┃ ┃ ┣ application.yml
+┃ ┃ ┗ data/headtohead.json (données de test)
 ┗ test/java/com/atelier/tennis
-┣ controller/ → Tests unitaires REST
-┣ service/ → Tests unitaires métier
-┗ integration/→ Tests d’intégration complets
-
+  ┣ controller/ → Tests unitaires REST
+  ┣ service/ → Tests unitaires métier
+  ┗ integration/ → Tests d’intégration complets
 
 ---
 
@@ -83,7 +82,7 @@ tennis-stats-api
 ## ⚙️ Installation & Exécution locale
 
 ### 1️⃣ Cloner le projet
-```bash
+
 git clone https://github.com/karimboualam/tennis-stats-api.git
 cd tennis-stats-api
 
