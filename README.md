@@ -272,7 +272,7 @@ jobs:
 | ------------- | ------------------------------------------------------------------------------ |
 | 📘 Swagger UI | [http://localhost:8081/swagger-ui.html](http://localhost:8081/swagger-ui.html) |
 | 🧠 JavaDoc    | [Tennis Stats API – JavaDoc](https://karimboualam.github.io/tennis-stats-api/) |
-| 🧪 SonarCloud | *(à compléter)*                                                                |
+| 🧪 SonarCloud | | [https://sonarcloud.io/summary/new_code?id=karimboualam_tennis-stats-api](https://sonarcloud.io/summary/new_code?id=karimboualam_tennis-stats-api)                                                                |
 | 📈 JaCoCo     | `target/site/jacoco/index.html`                                                |
 
 ---
