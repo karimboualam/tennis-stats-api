@@ -128,6 +128,8 @@ Lancer les tests unitaires et d’intégration :
 
 mvn clean verify
 
+---
+
 ### Rapports générés automatiquement :
 
 
@@ -137,6 +139,7 @@ mvn clean verify
 | 🎯 Style            | **Checkstyle (Google)** | `mvn checkstyle:check` | `target/checkstyle-result.xml`                 |
 | 🧩 Analyse statique | **SonarQube**           | `mvn sonar:sonar`      | [http://localhost:9000](http://localhost:9000) |
 
+---
 
 ### 🧩 Tests d’intégration
 
@@ -154,10 +157,14 @@ Calcul des statistiques (GET /api/stats)
 
 Controller → Service → Repository
 
+---
+
 ### 📘 Documentation JavaDoc
 
 La documentation complète du projet est disponible ici :
 👉 Tennis Stats API – JavaDoc
+
+---
 
 ### ☁️ Déploiement Render (Cloud)
 
@@ -185,6 +192,8 @@ Profil actif : prod
 
 Base de données : PostgreSQL (hébergée)
 
+---
+
 ### 🔁 Intégration Continue (CI/CD)
 
 Un pipeline Maven est configuré pour :
@@ -202,6 +211,8 @@ Un pipeline Maven est configuré pour :
 Exemple de workflow GitHub Actions :
 
 # .github/workflows/maven.yml
+```
+
 name: CI Build
 on: [push]
 jobs:
@@ -218,6 +229,9 @@ jobs:
         run: mvn clean verify
       - name: SonarCloud Analysis
         run: mvn sonar:sonar -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+```
+
+---
 
 ### 📊 SonarCloud Dashboard
 
@@ -233,6 +247,7 @@ jobs:
 | 🧹 Duplications       | Détection de code redondant            |
 | 🔒 Security Hotspots  | Vérification de la sécurité du code    |
 
+---
 
 ### 🧠 Stack technique
 
@@ -250,6 +265,7 @@ jobs:
 | **Render**                 | Déploiement cloud                |
 | **GitHub Actions**         | CI/CD                            |
 
+---
 
 ### 📄 Documentation & rapports
 
@@ -260,7 +276,7 @@ jobs:
 | 🧪 SonarCloud | *(à compléter)*                                                                |
 | 📈 JaCoCo     | `target/site/jacoco/index.html`                                                |
 
-
+---
 
 ## 👨‍💻 Auteur
 
