@@ -6,6 +6,21 @@
 ![Checkstyle](https://img.shields.io/badge/checkstyle-clean-blue)
 ![Java](https://img.shields.io/badge/Java-21-orange)
 ![Spring Boot](https://img.shields.io/badge/SpringBoot-3.3.4-brightgreen)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+
+---
+
+## 📑 Sommaire
+- [🧩 Description](#-description)
+- [🧱 Architecture du projet](#-architecture-du-projet)
+- [🧠 Bonnes pratiques et conception](#-bonnes-pratiques-et-conception)
+- [⚙️ Installation & Exécution locale](#️-installation--exécution-locale)
+- [🧪 Tests & Qualité](#-tests-et-qualité)
+- [☁️ Déploiement Render](#️-déploiement-render)
+- [📊 SonarCloud Dashboard](#-sonarcloud-dashboard)
+- [🧠 Stack technique](#-stack-technique)
+- [📄 Documentation & Rapports](#-documentation--rapports)
+- [👨‍💻 Auteur](#-auteur)
 
 ---
 
@@ -14,19 +29,20 @@
 **Tennis Stats API** est une application **Spring Boot 3 / Java 21** développée dans le cadre du **test technique L’Atelier**.  
 Elle expose une **API RESTful** permettant de :
 
-- 🎾 Consulter la liste des joueurs triés par classement (1 = meilleur)
-- 🔍 Rechercher un joueur par son identifiant
-- ➕ Créer un nouveau joueur
-- 📊 Obtenir des statistiques globales :
-  - 🏳️ Pays avec le meilleur ratio de victoires
-  - ⚖️ IMC moyen de tous les joueurs
-  - 📏 Taille médiane des joueurs
+- 🎾 Consulter la liste des joueurs triés par classement (1 = meilleur)  
+- 🔍 Rechercher un joueur par son identifiant  
+- ➕ Créer un nouveau joueur  
+- 📊 Obtenir des statistiques globales :  
+  - 🏳️ Pays avec le meilleur ratio de victoires  
+  - ⚖️ IMC moyen de tous les joueurs  
+  - 📏 Taille médiane des joueurs  
 
-L’application suit les **principes SOLID**, une **architecture en couches claire**, et inclut des outils de **qualité logicielle (SonarQube, Checkstyle, JaCoCo)** ainsi qu’un **déploiement automatisé sur Render**.
+L’application suit les **principes SOLID**, une **architecture claire en couches**, et inclut des outils de **qualité logicielle (SonarQube, Checkstyle, JaCoCo)** ainsi qu’un **déploiement automatisé sur Render**.
 
 ---
 
 ## 🧱 Architecture du projet
+
 
 tennis-stats-api
 ┣ src
@@ -72,7 +88,7 @@ git clone https://github.com/karimboualam/tennis-stats-api.git
 cd tennis-stats-api
 
 
-2️⃣ Lancer l’application avec H2
+### 2️⃣ Lancer l’application avec H2
 
 mvn clean spring-boot:run
 
@@ -80,7 +96,7 @@ Par défaut, le profil actif est dev.
 L’application démarre sur :
 👉 http://localhost:8081
 
-3️⃣ Accéder à la console H2
+### 3️⃣ Accéder à la console H2
 
 👉 http://localhost:8081/h2-console
 
@@ -90,7 +106,7 @@ Username : sa
 
 Password : (vide)
 
-📚 Endpoints principaux
+### 📚 Endpoints principaux
 
 | Méthode | URL                 | Description                                 |
 | ------- | ------------------- | ------------------------------------------- |
@@ -99,7 +115,7 @@ Password : (vide)
 | `POST`  | `/api/players`      | Crée un nouveau joueur                      |
 | `GET`   | `/api/stats`        | Renvoie les statistiques globales           |
 
-📘 Documentation interactive (Swagger) :
+### 📘 Documentation interactive (Swagger) :
 👉 http://localhost:8081/swagger-ui.html
 
 🧪 Tests et qualité du code
@@ -107,7 +123,7 @@ Lancer les tests unitaires et d’intégration :
 
 mvn clean verify
 
-Rapports générés automatiquement :
+### Rapports générés automatiquement :
 
 
 | Type                | Outil                   | Commande               | Rapport                                        |
@@ -117,7 +133,7 @@ Rapports générés automatiquement :
 | 🧩 Analyse statique | **SonarQube**           | `mvn sonar:sonar`      | [http://localhost:9000](http://localhost:9000) |
 
 
-🧩 Tests d’intégration
+### 🧩 Tests d’intégration
 
 Le test PlayerIntegrationTest vérifie le flux complet de l’application :
 
@@ -133,12 +149,12 @@ Calcul des statistiques (GET /api/stats)
 
 Controller → Service → Repository
 
-📘 Documentation JavaDoc
+### 📘 Documentation JavaDoc
 
 La documentation complète du projet est disponible ici :
 👉 Tennis Stats API – JavaDoc
 
-☁️ Déploiement Render (Cloud)
+### ☁️ Déploiement Render (Cloud)
 
 🔗 Lien Render (à insérer ici)
 ➡️ (Exemple : https://tennis-stats-api.onrender.com
@@ -164,7 +180,7 @@ Profil actif : prod
 
 Base de données : PostgreSQL (hébergée)
 
-🔁 Intégration Continue (CI/CD)
+### 🔁 Intégration Continue (CI/CD)
 
 Un pipeline Maven est configuré pour :
 
@@ -198,7 +214,7 @@ jobs:
       - name: SonarCloud Analysis
         run: mvn sonar:sonar -Dsonar.login=${{ secrets.SONAR_TOKEN }}
 
-📊 SonarCloud Dashboard
+### 📊 SonarCloud Dashboard
 
 
 🔗 Lien SonarCloud (à insérer ici)
@@ -213,7 +229,7 @@ jobs:
 | 🔒 Security Hotspots  | Vérification de la sécurité du code    |
 
 
-🧠 Stack technique
+### 🧠 Stack technique
 
 | Technologie                | Rôle                             |
 | -------------------------- | -------------------------------- |
@@ -230,7 +246,7 @@ jobs:
 | **GitHub Actions**         | CI/CD                            |
 
 
-📄 Documentation & rapports
+### 📄 Documentation & rapports
 
 | Type          | Accès                                                                          |
 | ------------- | ------------------------------------------------------------------------------ |
