@@ -26,9 +26,6 @@
         <springdoc.version>2.5.0</springdoc.version>
         
         <!-- Configuration SonarQube -->
-        <sonar.host.url>http://localhost:9000</sonar.host.url>
-        <sonar.login>sqa_2123519819cdaf66a60029bdacd3bee35f4e254e</sonar.login>
-        <sonar.projectKey>tennis-stats-api</sonar.projectKey>
         <sonar.sourceEncoding>UTF-8</sonar.sourceEncoding>
     </properties>
 
