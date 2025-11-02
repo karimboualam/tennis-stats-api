@@ -125,3 +125,6 @@ render.yaml
 .gitignore
 .gitattributes
 .gitconfig
+
+# ✅ Autoriser le rapport JaCoCo pour SonarCloud
+!target/site/jacoco/jacoco.xml
