@@ -1,6 +1,6 @@
 # 🎾 Tennis Stats API
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=karimboualam_tennis-stats-api&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=karimboualam_tennis-stats-api)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=karimboualam_tennis-stats-api&metric=alert_status)](https://sonarcloud.io/project/overview?id=karimboualam_tennis-stats-api)
 ![Build](https://img.shields.io/badge/build-passing-brightgreen)
 ![Coverage](https://img.shields.io/badge/coverage-91%25-brightgreen)
 ![Checkstyle](https://img.shields.io/badge/checkstyle-clean-blue)
@@ -237,7 +237,7 @@ jobs:
 
 
 🔗 **Analyse qualité :**
-[https://sonarcloud.io/summary/new_code?id=karimboualam_tennis-stats-api](https://sonarcloud.io/summary/new_code?id=karimboualam_tennis-stats-api)
+[https://sonarcloud.io/project/overview?id=karimboualam_tennis-stats-api](https://sonarcloud.io/project/overview?id=karimboualam_tennis-stats-api)
 
 | Métrique              | Description                            |
 | --------------------- | -------------------------------------- |
@@ -272,7 +272,7 @@ jobs:
 | ------------- | ------------------------------------------------------------------------------ |
 | 📘 Swagger UI | [http://localhost:8081/swagger-ui.html](http://localhost:8081/swagger-ui.html) |
 | 🧠 JavaDoc    | [Tennis Stats API – JavaDoc](https://karimboualam.github.io/tennis-stats-api/) |
-| 🧪 SonarCloud | [https://sonarcloud.io/summary/new_code?id=karimboualam_tennis-stats-api](https://sonarcloud.io/summary/new_code?id=karimboualam_tennis-stats-api)                                                                |
+| 🧪 SonarCloud | [https://sonarcloud.io/project/overview?id=karimboualam_tennis-stats-api](https://sonarcloud.io/project/overview?id=karimboualam_tennis-stats-api)                                                                |
 | 📈 JaCoCo     | `target/site/jacoco/index.html`                                                |
 
 ---
