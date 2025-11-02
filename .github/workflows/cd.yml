@@ -1,14 +1,17 @@
 name: 🚀 CD - Deploy to Render
 
 on:
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows: ["🧪 CI - Build & SonarCloud"]
+    types:
+      - completed
 
 jobs:
   deploy:
     name: Deploy to Render
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
