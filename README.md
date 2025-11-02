@@ -80,7 +80,6 @@ tennis-stats-api
 - **Qualité vérifiée** via SonarQube, JaCoCo et Checkstyle
 
 ---
----
 
 ## ⚙️ Installation & Exécution locale
 
@@ -107,7 +106,7 @@ JDBC URL : jdbc:h2:mem:tennisdb
 Username : sa
 
 Password : (vide)
-
+``` 
 ### 📚 Endpoints principaux
 
 | Méthode | URL                 | Description                                 |
