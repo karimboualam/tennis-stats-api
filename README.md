@@ -65,6 +65,7 @@ tennis-stats-api
   ┗ integration/ → Tests d’intégration complets
 
 ---
+---
 
 ## 🧠 Bonnes pratiques et conception
 
@@ -77,6 +78,7 @@ tennis-stats-api
 - **JavaDoc complète** pour toutes les classes publiques
 - **Qualité vérifiée** via SonarQube, JaCoCo et Checkstyle
 
+---
 ---
 
 ## ⚙️ Installation & Exécution locale
