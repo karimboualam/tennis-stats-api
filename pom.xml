@@ -27,6 +27,9 @@
         
         <!-- Configuration SonarQube -->
         <sonar.sourceEncoding>UTF-8</sonar.sourceEncoding>
+        <sonar.junit.reportPaths>target/surefire-reports</sonar.junit.reportPaths>
+        <sonar.coverage.jacoco.xmlReportPaths>target/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+
     </properties>
 
     <dependencies>
