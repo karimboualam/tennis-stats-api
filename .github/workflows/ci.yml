@@ -1,4 +1,4 @@
-name: CI - Build & SonarCloud
+name: 🧪 CI - Build & SonarCloud
 
 on:
   push:
@@ -21,22 +21,23 @@ jobs:
           distribution: 'temurin'
           java-version: 21
 
-      - name: Cache Maven packages
+      - name: Cache Maven dependencies
         uses: actions/cache@v4
         with:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
 
-      - name: Build & test
+      - name: Build & Test
         run: mvn clean verify -B
 
       - name: SonarCloud Scan
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn verify sonar:sonar \
-          -Dsonar.projectKey=karimboualam_tennis-stats-api \
-          -Dsonar.organization=karimboualam \
-          -Dsonar.host.url=https://sonarcloud.io \
+        run: >
+          mvn verify sonar:sonar
+          -Dsonar.projectKey=karimboualam_tennis-stats-api
+          -Dsonar.organization=karimboualam
+          -Dsonar.host.url=https://sonarcloud.io
           -Dsonar.token=${{ secrets.SONAR_TOKEN }}

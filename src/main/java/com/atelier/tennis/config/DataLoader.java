@@ -30,7 +30,7 @@ import java.util.List;
  */
 @Slf4j
 @Component
-@Profile("dev")
+@Profile({"dev", "prod"})
 public class DataLoader implements CommandLineRunner {
 
     /** Référentiel JPA pour la gestion des entités {@link Player}. */
