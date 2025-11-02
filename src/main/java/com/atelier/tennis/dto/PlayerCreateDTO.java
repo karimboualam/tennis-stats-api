@@ -1,6 +1,8 @@
 package com.atelier.tennis.dto;
 
-import jakarta.validation.constraints.*;
+import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.PositiveOrZero;
+import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
 @Data

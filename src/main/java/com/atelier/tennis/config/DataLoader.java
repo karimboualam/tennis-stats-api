@@ -1,7 +1,6 @@
 package com.atelier.tennis.config;
 
 import com.atelier.tennis.entity.Player;
-import com.atelier.tennis.entity.Stats;
 import com.atelier.tennis.repository.PlayerRepository;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -16,7 +15,7 @@ import java.util.List;
 
 @Slf4j
 @Component
-@Profile("dev") 
+@Profile("dev")
 public class DataLoader implements CommandLineRunner {
 
     private final PlayerRepository playerRepository;
@@ -30,13 +29,13 @@ public class DataLoader implements CommandLineRunner {
     @Override
     public void run(String... args) {
         if (playerRepository.count() > 0) {
-            log.info(" Players already loaded, skipping initialization.");
+            log.info("Players already loaded, skipping initialization.");
             return;
         }
 
         try (InputStream input = getClass().getResourceAsStream("/data/headtohead.json")) {
             if (input == null) {
-                log.error(" headtohead.json file not found!");
+                log.error("headtohead.json file not found!");
                 return;
             }
 
@@ -50,7 +49,9 @@ public class DataLoader implements CommandLineRunner {
                 if (lastNode.isArray()) {
                     long wins = 0;
                     for (JsonNode result : lastNode) {
-                        if (result.asInt() == 1) wins++;
+                        if (result.asInt() == 1) {
+                            wins++;
+                        }
                     }
                     double winRatio = (double) wins / lastNode.size();
                     player.getData().setWinRatio(winRatio);
@@ -60,10 +61,10 @@ public class DataLoader implements CommandLineRunner {
             }
 
             playerRepository.saveAll(players);
-            log.info(" Players loaded successfully: {}", players.size());
+            log.info("Players loaded successfully: {}", players.size());
 
         } catch (Exception e) {
-            log.error(" Error loading players data: {}", e.getMessage(), e);
+            log.error("Error loading players data: {}", e.getMessage(), e);
         }
     }
 }
