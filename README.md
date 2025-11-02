@@ -168,9 +168,9 @@ La documentation complète du projet est disponible ici :
 
 ### ☁️ Déploiement Render (Cloud)
 
-🔗 Lien Render (à insérer ici)
-➡️ (Exemple : https://tennis-stats-api.onrender.com
-)
+
+🔗 **Démo en ligne :** [https://tennis-stats-api.onrender.com](https://tennis-stats-api.onrender.com)
+
 
 Étapes de déploiement :
 
@@ -236,9 +236,8 @@ jobs:
 ### 📊 SonarCloud Dashboard
 
 
-🔗 Lien SonarCloud (à insérer ici)
-➡️ (Exemple : https://sonarcloud.io/summary/new_code?id=karimboualam_tennis-stats-api
-)
+🔗 **Analyse qualité :**
+[https://sonarcloud.io/summary/new_code?id=karimboualam_tennis-stats-api](https://sonarcloud.io/summary/new_code?id=karimboualam_tennis-stats-api)
 
 | Métrique              | Description                            |
 | --------------------- | -------------------------------------- |
