@@ -1,0 +1,24 @@
+name: 🚀 CD - Deploy to Render
+
+on:
+  workflow_run:
+    workflows: ["🧪 CI - Build & SonarCloud"]
+    types:
+      - completed
+
+jobs:
+  deploy:
+    name: Deploy to Render
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Trigger Render Deployment
+        env:
+          RENDER_DEPLOY_HOOK: ${{ secrets.RENDER_DEPLOY_HOOK }}
+        run: |
+          echo "🚀 Triggering Render deploy..."
+          curl -X POST "$RENDER_DEPLOY_HOOK"
