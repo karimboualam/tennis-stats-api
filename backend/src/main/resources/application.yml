@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: tennis-stats-api
+  profiles:
+    active: prod
+
+server:
+  port: ${PORT:8081} 
+logging:
+  level:
+    root: INFO
+    com.atelier.tennis: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info
+  endpoint:
+    health:
+      show-details: always
